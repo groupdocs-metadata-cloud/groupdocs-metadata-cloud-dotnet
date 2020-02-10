@@ -39,12 +39,12 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class NameOptions 
     {                       
         /// <summary>
-        /// Gets or sets the value.
+        /// The value for name matching.
         /// </summary>  
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or sets the match options.
+        /// Specifies how to find property name.
         /// </summary>  
         public MatchOptions MatchOptions { get; set; }
 

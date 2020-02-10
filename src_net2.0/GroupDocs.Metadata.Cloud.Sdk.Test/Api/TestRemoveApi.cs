@@ -116,7 +116,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
         }
 
         [Test]
-        public void RemoveApiTest_PropertyNameWholeWord()
+        public void RemoveApiTest_PropertyNameExactPhrase()
         {
             var options = new RemoveOptions
             {
@@ -128,7 +128,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
                         Value = "NameOfApplication",
                         MatchOptions = new MatchOptions
                         {
-                            WholeWord = true
+                            ExactPhrase = true
                         }
                     }
                 }

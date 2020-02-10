@@ -191,7 +191,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
         }
 
         [Test]
-        public void SetApiTest_PropertyNameWholeWord()
+        public void SetApiTest_PropertyNameExactPhrase()
         {
             var testFile = TestFiles.Docx;
 
@@ -211,7 +211,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
                                 Value = "NameOfApplication",
                                 MatchOptions = new MatchOptions
                                 {
-                                    WholeWord = true
+                                    ExactPhrase = true
                                 }
                             }
                         },

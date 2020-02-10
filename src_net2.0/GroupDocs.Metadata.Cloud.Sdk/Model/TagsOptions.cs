@@ -39,7 +39,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class TagsOptions 
     {                       
         /// <summary>
-        /// Gets or sets the file information.
+        /// The file information.
         /// </summary>  
         public FileInfo FileInfo { get; set; }
 

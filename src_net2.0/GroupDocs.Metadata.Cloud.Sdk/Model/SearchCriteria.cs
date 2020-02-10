@@ -39,7 +39,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class SearchCriteria : SearchCriteriaWithoutValue 
     {                       
         /// <summary>
-        /// Gets or sets the value options.
+        /// Options to find property by value.
         /// </summary>  
         public ValueOptions ValueOptions { get; set; }
 

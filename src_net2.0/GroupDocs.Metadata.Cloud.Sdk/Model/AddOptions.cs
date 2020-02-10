@@ -39,17 +39,17 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class AddOptions 
     {                       
         /// <summary>
-        /// Gets or sets the file information.
+        /// Gets or sets the storage file information.
         /// </summary>  
         public FileInfo FileInfo { get; set; }
 
         /// <summary>
-        /// Gets or sets the output folder.
+        /// The output folder in storage.
         /// </summary>  
         public string OutputFolder { get; set; }
 
         /// <summary>
-        /// Gets or sets the properties.
+        /// Collection of properties to add.
         /// </summary>  
         public List<AddProperty> Properties { get; set; }
 

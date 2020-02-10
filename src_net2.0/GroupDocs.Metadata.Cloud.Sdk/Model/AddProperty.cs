@@ -39,17 +39,17 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class AddProperty 
     {                       
         /// <summary>
-        /// Gets or sets the value.
+        /// The value of the property.
         /// </summary>  
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or sets the type.
+        /// Value type.
         /// </summary>  
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or sets the search criteria.
+        /// Options to define metadata property tag or name.
         /// </summary>  
         public SearchCriteriaWithoutValue SearchCriteria { get; set; }
 

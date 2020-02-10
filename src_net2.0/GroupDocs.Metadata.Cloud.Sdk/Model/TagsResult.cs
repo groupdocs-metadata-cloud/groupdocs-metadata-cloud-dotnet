@@ -39,7 +39,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class TagsResult 
     {                       
         /// <summary>
-        /// Gets or sets the root package.
+        /// Root metadata package of the file.
         /// </summary>  
         public MetadataPackage RootPackage { get; set; }
 

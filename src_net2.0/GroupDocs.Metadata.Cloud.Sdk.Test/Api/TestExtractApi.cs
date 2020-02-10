@@ -105,7 +105,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
         }
 
         [Test]
-        public void ExtractApiTest_PropertyNameWholeWord()
+        public void ExtractApiTest_PropertyNameExactPhrase()
         {
             var options = new ExtractOptions
             {
@@ -117,7 +117,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
                         Value = "MimeType",
                         MatchOptions = new MatchOptions
                         {
-                            WholeWord = true
+                            ExactPhrase = true
                         }
                     }
                 }

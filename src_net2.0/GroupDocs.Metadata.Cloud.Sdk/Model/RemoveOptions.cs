@@ -39,17 +39,17 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class RemoveOptions 
     {                       
         /// <summary>
-        /// Gets or sets the file information.
+        /// The file information.
         /// </summary>  
         public FileInfo FileInfo { get; set; }
 
         /// <summary>
-        /// Gets or sets the output folder.
+        /// The output folder.
         /// </summary>  
         public string OutputFolder { get; set; }
 
         /// <summary>
-        /// Gets or sets the search criteria.
+        /// Options to remove properties.
         /// </summary>  
         public SearchCriteria SearchCriteria { get; set; }
 

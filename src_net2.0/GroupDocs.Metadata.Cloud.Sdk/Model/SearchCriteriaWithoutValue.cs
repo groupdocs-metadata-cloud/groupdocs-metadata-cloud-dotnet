@@ -39,12 +39,12 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class SearchCriteriaWithoutValue 
     {                       
         /// <summary>
-        /// Gets or sets the tag options.
+        /// Options to find property by tag.
         /// </summary>  
         public TagOptions TagOptions { get; set; }
 
         /// <summary>
-        /// Gets or sets the name options.
+        /// Options to find property by name.
         /// </summary>  
         public NameOptions NameOptions { get; set; }
 

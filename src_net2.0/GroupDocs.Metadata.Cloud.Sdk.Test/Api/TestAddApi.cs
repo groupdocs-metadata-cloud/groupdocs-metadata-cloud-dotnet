@@ -120,7 +120,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
         }
 
         [Test]
-        public void AddApiTest_PropertyNameWholeWord()
+        public void AddApiTest_PropertyNameExactPhrase()
         {
             var testFile = TestFiles.Doc;
             var now = DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss");
@@ -141,7 +141,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
                                 Value = "Lastprinted",
                                 MatchOptions = new MatchOptions
                                 {
-                                    WholeWord = true
+                                    ExactPhrase = true
                                 }
                             }
                         },

@@ -39,12 +39,12 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class Tag 
     {                       
         /// <summary>
-        /// Gets or sets the name.
+        /// Name of the tag.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the category.
+        /// Category of the tag.
         /// </summary>  
         public string Category { get; set; }
 

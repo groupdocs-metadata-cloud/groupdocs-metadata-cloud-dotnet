@@ -39,12 +39,12 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class ExtractResult 
     {                       
         /// <summary>
-        /// Gets or sets the metadata tree.
+        /// Whole metadata tree of the file.
         /// </summary>  
         public MetadataPackage MetadataTree { get; set; }
 
         /// <summary>
-        /// Gets or sets the properties.
+        /// Metadata properties found by tag.
         /// </summary>  
         public List<MetadataProperty> Properties { get; set; }
 

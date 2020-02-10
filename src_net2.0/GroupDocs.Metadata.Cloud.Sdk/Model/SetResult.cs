@@ -39,17 +39,17 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class SetResult 
     {                       
         /// <summary>
-        /// Gets or sets the path.
+        /// Resultant file path in storage.
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets the URL.
+        /// Resultant file download url.
         /// </summary>  
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or sets the set count.
+        /// Total count of set properties.
         /// </summary>  
         public int? SetCount { get; set; }
 

@@ -39,12 +39,12 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class MatchOptions 
     {                       
         /// <summary>
-        /// Gets or sets a value indicating whether to match exact string.
+        /// Gets or sets a value indicating whether to match exact string phrase.
         /// </summary>  
-        public bool? WholeWord { get; set; }
+        public bool? ExactPhrase { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this instance is regular expression.
+        /// Gets or sets a value indicating whether to match by regular expression.
         /// </summary>  
         public bool? IsRegex { get; set; }
 
@@ -56,7 +56,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
         {
           var sb = new StringBuilder();
           sb.Append("class MatchOptions {\n");
-          sb.Append("  WholeWord: ").Append(this.WholeWord).Append("\n");
+          sb.Append("  ExactPhrase: ").Append(this.ExactPhrase).Append("\n");
           sb.Append("  IsRegex: ").Append(this.IsRegex).Append("\n");
           sb.Append("}\n");
           return sb.ToString();

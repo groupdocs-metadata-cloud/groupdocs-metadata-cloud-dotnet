@@ -39,12 +39,12 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class TagOptions 
     {                       
         /// <summary>
-        /// Gets or sets the name of the possible.
+        /// A part or a possible tag name.
         /// </summary>  
         public string PossibleName { get; set; }
 
         /// <summary>
-        /// Gets or sets the exact tag.
+        /// Options to specify exact tag.
         /// </summary>  
         public Tag ExactTag { get; set; }
 

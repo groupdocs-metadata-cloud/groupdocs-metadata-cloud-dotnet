@@ -39,12 +39,12 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class ValueOptions 
     {                       
         /// <summary>
-        /// Gets or sets the value.
+        /// Specifies value of property to find.
         /// </summary>  
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or sets the type.
+        /// Type of property value.
         /// </summary>  
         public string Type { get; set; }
 

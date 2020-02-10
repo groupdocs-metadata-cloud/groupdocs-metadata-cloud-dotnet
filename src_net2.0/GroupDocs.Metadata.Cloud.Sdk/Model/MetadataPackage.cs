@@ -39,17 +39,17 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class MetadataPackage 
     {                       
         /// <summary>
-        /// Gets or sets the name of the package.
+        /// Name of the metadata package.
         /// </summary>  
         public string PackageName { get; set; }
 
         /// <summary>
-        /// Gets or sets the package properties.
+        /// Properties of the metadata package.
         /// </summary>  
         public List<MetadataProperty> PackageProperties { get; set; }
 
         /// <summary>
-        /// Gets or sets the inner packages.
+        /// Inner packages of current metadata package.
         /// </summary>  
         public List<MetadataPackage> InnerPackages { get; set; }
 

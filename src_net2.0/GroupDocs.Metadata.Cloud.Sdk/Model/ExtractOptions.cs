@@ -39,12 +39,12 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class ExtractOptions 
     {                       
         /// <summary>
-        /// Gets or sets the file information.
+        /// The file information.
         /// </summary>  
         public FileInfo FileInfo { get; set; }
 
         /// <summary>
-        /// Gets or sets the search criteria.
+        /// Options to find properties.
         /// </summary>  
         public SearchCriteria SearchCriteria { get; set; }
 

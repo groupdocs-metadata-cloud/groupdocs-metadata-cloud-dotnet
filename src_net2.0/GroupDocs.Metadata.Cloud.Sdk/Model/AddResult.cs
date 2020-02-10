@@ -39,17 +39,17 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class AddResult 
     {                       
         /// <summary>
-        /// Gets or sets the path.
+        /// Resultant file path in storage.
         /// </summary>  
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or sets the URL.
+        /// Resultant file download url.
         /// </summary>  
         public string Url { get; set; }
 
         /// <summary>
-        /// Gets or sets the added count.
+        /// Total count of added properties.
         /// </summary>  
         public int? AddedCount { get; set; }
 

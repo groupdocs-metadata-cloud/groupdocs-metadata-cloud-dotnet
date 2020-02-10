@@ -39,27 +39,27 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Model
     public class MetadataProperty 
     {                       
         /// <summary>
-        /// Gets or sets the name.
+        /// Name of the property.
         /// </summary>  
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the value.
+        /// Value of the property.
         /// </summary>  
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or sets the type of the property.
+        /// Property type.
         /// </summary>  
         public string PropertyType { get; set; }
 
         /// <summary>
-        /// Gets or sets the access level.
+        /// Property access level.
         /// </summary>  
         public string AccessLevel { get; set; }
 
         /// <summary>
-        /// Gets or sets the tags.
+        /// Collection of the property tags.
         /// </summary>  
         public List<Tag> Tags { get; set; }
 
