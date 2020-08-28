@@ -48,12 +48,4 @@ namespace Example
 ## Licensing
 All GroupDocs.Metadata Cloud SDKs are licensed under [MIT License](LICENSE).
 
-## Resources
-+ [**Website**](https://www.groupdocs.cloud)
-+ [**Product Home**](https://products.groupdocs.cloud/metadata)
-+ [**Documentation**](https://docs.groupdocs.cloud/display/metadatacloud/Home)
-+ [**Free Support Forum**](https://forum.groupdocs.cloud/c/metadata)
-+ [**Blog**](https://blog.groupdocs.cloud/category/metadata)
-
-## Contact Us
-Your feedback is very important to us. Please feel free to contact us using our [Support Forums](https://forum.groupdocs.cloud/c/metadata).
+[Home](https://www.groupdocs.cloud/) | [Product Page](https://products.groupdocs.cloud/metadata/net) | [Docs](https://docs.groupdocs.cloud/metadata/) | [Demos](https://products.groupdocs.app/metadata/family) | [API Reference](https://apireference.groupdocs.cloud/metadata/) | [Examples](https://github.com/groupdocs-metadata-cloud/groupdocs-metadata-cloud-dotnet) | [Blog](https://blog.groupdocs.cloud/category/metadata/) | [Free Support](https://forum.groupdocs.cloud/c/metadata) | [Free Trial](https://purchase.groupdocs.cloud/trial)
