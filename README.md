@@ -2,7 +2,7 @@
 This repository contains GroupDocs.Metadata Cloud SDK for .NET source code. This SDK allows you to work with GroupDocs.Metadata Cloud REST APIs in your .NET applications.
 
 ## How to use the SDK?
-The complete source code is available in this repository folder, you can either directly use it in your project via NuGet package manager. For more details, please visit our [documentation website](https://docs.groupdocs.cloud/display/metadatacloud/Available+SDKs#AvailableSDKs-.NET).
+The complete source code is available in this repository folder, you can either directly use it in your project via NuGet package manager. For more details, please visit our [documentation website](https://docs.groupdocs.cloud/metadata/available-sdks/).
 
 ## Dependencies
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json)
