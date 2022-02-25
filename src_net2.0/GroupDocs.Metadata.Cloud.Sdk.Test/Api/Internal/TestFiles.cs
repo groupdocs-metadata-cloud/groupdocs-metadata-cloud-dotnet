@@ -43,6 +43,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api.Internal
         public static readonly TestFile Jpg = new TestFile("input.jpg", "images\\");
         public static readonly TestFile Json = new TestFile("sample.json", "files\\");
         public static readonly TestFile Psd = new TestFile("iptc.psd", "files\\");
+        public static readonly TestFile Mkv = new TestFile("input.mkv", "files\\");
         public static readonly TestFile NotExist = new TestFile("folder\\file-not-exist.pdf", "");
 
         public static IEnumerable<TestFile> TestFilesList
@@ -60,6 +61,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api.Internal
                 yield return Jpg;
                 yield return Json;
                 yield return Psd;
+                yield return Mkv;
             }
         }
     }

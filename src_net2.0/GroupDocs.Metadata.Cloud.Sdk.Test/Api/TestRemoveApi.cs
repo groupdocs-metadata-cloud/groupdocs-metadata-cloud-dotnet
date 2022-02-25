@@ -3,6 +3,7 @@ using GroupDocs.Metadata.Cloud.Sdk.Client;
 using GroupDocs.Metadata.Cloud.Sdk.Model;
 using GroupDocs.Metadata.Cloud.Sdk.Model.Requests;
 using GroupDocs.Metadata.Cloud.Sdk.Test.Api.Internal;
+using GroupDocs.Metadata.Cloud.Sdk.Test.Infrastructure;
 using NUnit.Framework;
 
 namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
@@ -217,7 +218,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 
             var request = new RemoveRequest(options);
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Remove(request); });
-            Assert.AreEqual("The specified tag was not found or has incorrect format.", ex.Message);
+            Assert.AreEqual("The specified tag was not found or has incorrect format.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -242,7 +243,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 
             var request = new RemoveRequest(options);
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Remove(request); });
-            Assert.AreEqual($"The specified file '{testFile.FullName}' is protected.", ex.Message);
+            Assert.AreEqual($"The specified file '{testFile.FullName}' is protected.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -267,7 +268,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 
             var request = new RemoveRequest(options);
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Remove(request); });
-            Assert.AreEqual($"The specified file '{testFile.FullName}' has type which is not currently supported.", ex.Message);
+            Assert.AreEqual($"The specified file '{testFile.FullName}' has type which is not currently supported.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -288,7 +289,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 
             var request = new RemoveRequest(options);
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Remove(request); });
-            Assert.AreEqual($"Can't find file located at '{testFile.FullName}'.", ex.Message);
+            Assert.AreEqual($"Can't find file located at '{testFile.FullName}'.", JsonUtils.GetErrorMessage(ex.Message));
         }
     }
 }

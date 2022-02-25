@@ -7,6 +7,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GroupDocs.Metadata.Cloud.Sdk.Test.Infrastructure;
 
 namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 {
@@ -204,7 +205,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new ExtractRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Extract(request); });
-            Assert.AreEqual("The specified tag was not found or has incorrect format.", ex.Message);
+            Assert.AreEqual("The specified tag was not found or has incorrect format.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -219,7 +220,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new ExtractRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Extract(request); });
-            Assert.AreEqual($"The specified file '{testFile.FullName}' is protected.", ex.Message);
+            Assert.AreEqual($"The specified file '{testFile.FullName}' is protected.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -241,7 +242,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new ExtractRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Extract(request); });
-            Assert.AreEqual($"The specified file '{testFile.FullName}' has type which is not currently supported.", ex.Message);
+            Assert.AreEqual($"The specified file '{testFile.FullName}' has type which is not currently supported.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -256,7 +257,24 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new ExtractRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Extract(request); });
-            Assert.AreEqual($"Can't find file located at '{testFile.FullName}'.", ex.Message);
+            Assert.AreEqual($"Can't find file located at '{testFile.FullName}'.", JsonUtils.GetErrorMessage(ex.Message));
+        }
+
+        [Test]
+        public void ExtractApiTest_Mkv()
+        {
+            var options = new ExtractOptions
+            {
+                FileInfo = TestFiles.Mkv.ToFileInfo()
+            };
+
+            var request = new ExtractRequest(options);
+
+            var result = MetadataApi.Extract(request);
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.MetadataTree);
+            Assert.IsNotEmpty(result.MetadataTree.InnerPackages);
+            Assert.IsTrue(result.MetadataTree.InnerPackages.Any(x => string.Equals(x.PackageName, "FileFormat")));
         }
     }
 }

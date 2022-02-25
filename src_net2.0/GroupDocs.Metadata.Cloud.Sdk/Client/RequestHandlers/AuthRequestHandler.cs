@@ -79,6 +79,9 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Client.RequestHandlers
                 contentType: "application/x-www-form-urlencoded");
 
             var result = (GetAccessTokenResult)SerializationHelper.Deserialize(responseString, typeof(GetAccessTokenResult));
+
+
+
             _accessToken = result.AccessToken;
         }
 

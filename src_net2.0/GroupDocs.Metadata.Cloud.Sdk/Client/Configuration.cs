@@ -8,7 +8,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Client
     public class Configuration
     {
         private string apiVersion = "/v1.0";
-        private string apiBaseUrl = "https://api.groupdocs.cloud";
+        private string apiBaseUrl = "https://api-qa.groupdocs.cloud";
 
         /// <summary>
         /// Request timeout, default value is 100000 ms 

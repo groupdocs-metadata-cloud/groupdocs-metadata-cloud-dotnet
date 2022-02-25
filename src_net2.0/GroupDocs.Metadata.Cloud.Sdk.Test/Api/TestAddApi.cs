@@ -6,6 +6,7 @@ using GroupDocs.Metadata.Cloud.Sdk.Test.Api.Internal;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using GroupDocs.Metadata.Cloud.Sdk.Test.Infrastructure;
 
 namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 {
@@ -15,7 +16,6 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
         [Test]
         public void AddApiTest()
         {
-            var now = DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss");
             var testFile = TestFiles.Docx;
             var options = new AddOptions
             {
@@ -30,13 +30,13 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
                             {
                                 ExactTag = new Tag
                                 {
-                                    Name = "Printed",
-                                    Category = "Time"
+                                    Name = "Manager",
+                                    Category = "Person"
                                 }
                             }
                         },
-                        Value = now,
-                        Type = "DateTime"
+                        Value = "Test User",
+                        Type = "String"
                     }
                 }
             };
@@ -162,7 +162,6 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
         public void AddApiTest_PropertyNameRegex()
         {
             var testFile = TestFiles.Docx;
-            var now = DateTime.Now.ToString("MM-dd-yyyy hh:mm:ss");
 
             var options = new AddOptions
             {
@@ -171,13 +170,13 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
                 {
                     new AddProperty
                     {
-                        Value = now,
-                        Type = "DateTime",
+                        Value = "Test User",
+                        Type = "String",
                         SearchCriteria = new SearchCriteria
                         {
                             NameOptions = new NameOptions
                             {
-                                Value = "^.*print.*",
+                                Value = "^.*manage.*",
                                 MatchOptions = new MatchOptions
                                 {
                                     IsRegex = true
@@ -228,7 +227,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new AddRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Add(request); });
-            Assert.AreEqual($"There are no changes in metadata.", ex.Message);
+            Assert.AreEqual($"There are no changes in metadata.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -261,7 +260,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 
             var request = new AddRequest(options);
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Add(request); });
-            Assert.AreEqual(ex.Message, "Request parameters missing or have incorrect format");
+            Assert.AreEqual("Request parameters missing or have incorrect format", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -295,7 +294,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new AddRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Add(request); });
-            Assert.AreEqual($"The specified file '{testFile.FullName}' is protected.", ex.Message);
+            Assert.AreEqual($"The specified file '{testFile.FullName}' is protected.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -329,7 +328,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new AddRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Add(request); });
-            Assert.AreEqual($"The specified file '{testFile.FullName}' has type which is not currently supported.", ex.Message);
+            Assert.AreEqual($"The specified file '{testFile.FullName}' has type which is not currently supported.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -363,7 +362,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new AddRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { MetadataApi.Add(request); });
-            Assert.AreEqual($"Can't find file located at '{testFile.FullName}'.", ex.Message);
+            Assert.AreEqual($"Can't find file located at '{testFile.FullName}'.", JsonUtils.GetErrorMessage(ex.Message));
         }
     }
 }

@@ -2,6 +2,7 @@
 using GroupDocs.Metadata.Cloud.Sdk.Model;
 using GroupDocs.Metadata.Cloud.Sdk.Model.Requests;
 using GroupDocs.Metadata.Cloud.Sdk.Test.Api.Internal;
+using GroupDocs.Metadata.Cloud.Sdk.Test.Infrastructure;
 using NUnit.Framework;
 
 namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
@@ -42,7 +43,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var result = InfoApi.GetInfo(request);
             Assert.IsNotNull(result);
             Assert.AreEqual("APPLICATION/VND.OPENXMLFORMATS-OFFICEDOCUMENT.SPREADSHEETML.SHEET", result.FileType.MimeType.ToUpper());
-            Assert.AreEqual(3, result.PageCount);
+            Assert.AreEqual(2, result.PageCount);
         }
 
         [Test]
@@ -64,7 +65,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new GetInfoRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { InfoApi.GetInfo(request); });
-            Assert.AreEqual($"Can't find file located at '{TestFiles.NotExist.FullName}'.", ex.Message);
+            Assert.AreEqual($"Can't find file located at '{TestFiles.NotExist.FullName}'.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]

@@ -5,6 +5,7 @@ using GroupDocs.Metadata.Cloud.Sdk.Model.Requests;
 using GroupDocs.Metadata.Cloud.Sdk.Test.Api.Internal;
 using NUnit.Framework;
 using System.Linq;
+using GroupDocs.Metadata.Cloud.Sdk.Test.Infrastructure;
 
 namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 {
@@ -41,7 +42,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 
             var request = new TagsRequest(options);
             var ex = Assert.Throws<ApiException>(() => { InfoApi.Tags(request); });
-            Assert.AreEqual($"The specified file '{testFile.FullName}' is protected.", ex.Message);
+            Assert.AreEqual($"The specified file '{testFile.FullName}' is protected.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -55,7 +56,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
 
             var request = new TagsRequest(options);
             var ex = Assert.Throws<ApiException>(() => { InfoApi.Tags(request); });
-            Assert.AreEqual($"The specified file '{testFile.FullName}' has type which is not currently supported.", ex.Message);
+            Assert.AreEqual($"The specified file '{testFile.FullName}' has type which is not currently supported.", JsonUtils.GetErrorMessage(ex.Message));
         }
 
         [Test]
@@ -70,7 +71,7 @@ namespace GroupDocs.Metadata.Cloud.Sdk.Test.Api
             var request = new TagsRequest(options);
 
             var ex = Assert.Throws<ApiException>(() => { InfoApi.Tags(request); });
-            Assert.AreEqual($"Can't find file located at '{testFile.FullName}'.", ex.Message);
+            Assert.AreEqual($"Can't find file located at '{testFile.FullName}'.", JsonUtils.GetErrorMessage(ex.Message));
         }
     }
 }
