@@ -116,6 +116,9 @@ OpenAPI spec version: 22.1
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\TestData\files\input.mkv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\TestData\images\input.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
