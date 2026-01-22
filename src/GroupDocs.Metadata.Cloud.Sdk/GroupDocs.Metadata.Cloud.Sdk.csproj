@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net20</TargetFrameworks>
+    <AssemblyVersion>26.1.0.0</AssemblyVersion>
+    <FileVersion>26.1.0.0</FileVersion>
+    <Version>26.1.0</Version>
+    <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
+    <Company>GroupDocs</Company>
+    <Authors>GroupDocs Product Team</Authors>
+    <Copyright>Aspose Pty Ltd.</Copyright>
+    <Description>GroupDocs.Metadata Cloud SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/groupdocs-metadata-cloud/groupdocs-metadata-cloud-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://products.groupdocs.cloud/metadata/family</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/groupdocs-metadata-cloud/groupdocs-metadata-cloud-dotnet</RepositoryUrl>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net20'">
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+    <PackageReference Include="System.Diagnostics.TraceSource" Version="4.3.0" />
+  </ItemGroup>
+</Project>
